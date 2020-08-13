@@ -28,8 +28,9 @@ Run a linux desktop in AWS.
 | key\_name | The ec2 instance keypair name | `string` | `""` | no |
 | name | the name common to all resources created by this module | `string` | n/a | yes |
 | no\_proxy | the no proxy list | `string` | `""` | no |
+| private\_ips | A list of private IPs associated to the EC2 instances. This length should be the instances count | `list(string)` | `[]` | no |
 | root\_block\_device | The root ebs device config | `list(map(string))` | <pre>[<br>  {<br>    "delete_on_termination": true,<br>    "encrypted": true,<br>    "volume_size": 120,<br>    "volume_type": "gp2"<br>  }<br>]</pre> | no |
-| subnet\_id | the ec2 instance subnet | `string` | n/a | yes |
+| subnet\_ids | the ec2 instance subnet ids | `list(string)` | n/a | yes |
 | tags | provide a map of aws tags | `map(string)` | `{}` | no |
 | vpc\_id | the ec2 instance vpc id | `string` | n/a | yes |
 

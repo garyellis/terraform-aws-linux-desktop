@@ -1,5 +1,5 @@
 NAME=terraform-aws-linux-desktop
-VERSION=v0.1.0
+VERSION=v0.1.1
 REPO=https://github.com/garyellis/teraform-aws-linux-desktop.git
 RELEASE_BRANCH=master
 BRANCH=$$(git rev-parse --abbrev-ref HEAD | sed 's@[\/]@-@g')

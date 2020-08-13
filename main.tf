@@ -134,7 +134,8 @@ module "instance" {
   key_name                    = var.key_name
   associate_public_ip_address = false
   security_group_attachments  = list(module.sg.security_group_id)
-  subnet_ids                  = list(var.subnet_id)
+  subnet_ids                  = var.subnet_ids
+  private_ips                 = var.private_ips
   tags                        = var.tags
 
   root_block_device           = var.root_block_device

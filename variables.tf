@@ -15,9 +15,15 @@ variable "ami_id" {
   default     = "ami-05705aed6eb5b2574"
 }
 
-variable "subnet_id" {
-  description = "the ec2 instance subnet"
-  type        = string
+variable "subnet_ids" {
+  description = "the ec2 instance subnet ids"
+  type        = list(string)
+}
+
+variable "private_ips" {
+  description = "A list of private IPs associated to the EC2 instances. This length should be the instances count"
+  type        = list(string)
+  default     = []
 }
 
 variable "vpc_id" {

@@ -1,7 +1,7 @@
 variable "name" {}
 variable "key_name" {}
 variable "vpc_id" {}
-variable "subnet_id" {}
+variable "subnet_ids" { type = list(string) }
 variable "tags" { type = map(string) }
 
 module "linux_desktop" {
@@ -10,7 +10,7 @@ module "linux_desktop" {
   name                        = var.name
   key_name                    = var.key_name
   iam_role_policy_attachments = []
-  subnet_id                   = var.subnet_id
+  subnet_ids                   = var.subnet_ids
   vpc_id                      = var.vpc_id
   tags                        = var.tags
 
